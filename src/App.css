@@ -1,0 +1,390 @@
+/* Google Font (optional, elegant serif) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+    background:#f8f9fa;
+}
+
+/* Navbar */
+.navbar{
+    background:linear-gradient(90deg,#111827,#1f2937)!important;
+    padding:14px 0;
+    box-shadow:0 4px 18px rgba(0,0,0,.18);
+}
+
+/* Logo */
+.navbar-brand{
+    font-family:"Cormorant Garamond","Times New Roman",serif;
+    font-size:2rem;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#ffffff !important;
+    transition:all .35s ease;
+}
+
+.navbar-brand:hover{
+    color:#7dd3fc !important;
+    text-shadow:0 0 8px rgba(125,211,252,.45);
+}
+
+/* Nav Links */
+.nav-link{
+    font-family:"Cormorant Garamond","Times New Roman",serif;
+    font-size:1.15rem;
+    font-weight:600;
+    color:#d1d5db !important;
+    margin-left:15px;
+    transition:all .35s ease;
+    position:relative;
+}
+
+/* Underline Animation */
+.nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:2px;
+    width:0%;
+    height:2px;
+    background:#7dd3fc;
+    transition:.35s;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+.nav-link:hover{
+    color:#ffffff !important;
+    text-shadow:0 0 6px rgba(125,211,252,.35);
+}
+
+/* Search Box */
+.form-control{
+    border-radius:30px;
+    border:1px solid #4b5563;
+    background:#1f2937;
+    color:#fff;
+}
+
+.form-control:focus{
+    background:#1f2937;
+    color:#fff;
+    border-color:#7dd3fc;
+    box-shadow:0 0 10px rgba(125,211,252,.25);
+}
+
+/* Search Button */
+.btn-outline-success{
+    border-radius:30px;
+    border-color:#7dd3fc;
+    color:#7dd3fc;
+    transition:.35s;
+}
+
+.btn-outline-success:hover{
+    background:#7dd3fc;
+    color:#111827;
+    box-shadow:0 0 10px rgba(125,211,252,.35);
+}
+
+.card{
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.15)!important;
+}
+
+.card h4{
+    font-family:"Cormorant Garamond","Times New Roman",serif;
+    font-size:1.8rem;
+}
+
+.card p{
+    color:#6c757d;
+}
+
+.btn-danger{
+    border-radius:25px;
+    transition:.3s;
+}
+
+.btn-danger:hover{
+    transform:scale(1.05);
+}
+
+/* Add Todo Form */
+
+form{
+
+background:white;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+h2{
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:2.2rem;
+
+font-weight:bold;
+
+}
+
+.form-control{
+
+border-radius:12px;
+
+padding:12px;
+
+}
+
+.btn-primary{
+
+border-radius:12px;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+.btn-primary:hover{
+
+transform:translateY(-2px);
+
+}
+
+/* ===========================
+   DARK / LIGHT THEME
+=========================== */
+
+*{
+  transition: background-color .35s ease,
+              color .35s ease,
+              border-color .35s ease,
+              box-shadow .35s ease;
+}
+
+/* LIGHT THEME */
+body[data-theme="light"]{
+  background:#f5f7fb;
+  color:#111827;
+}
+
+body[data-theme="light"] .card{
+  background:#ffffff;
+  color:#111827;
+}
+
+body[data-theme="light"] form{
+  background:#ffffff;
+}
+
+body[data-theme="light"] .form-control,
+body[data-theme="light"] .form-select{
+  background:#ffffff;
+  color:#111827;
+  border:1px solid #ced4da;
+}
+
+body[data-theme="light"] .form-control::placeholder{
+  color:#6c757d;
+}
+
+/* DARK THEME */
+body[data-theme="dark"]{
+  background:#0f172a;
+  color:#f8fafc;
+}
+
+body[data-theme="dark"] .card{
+  background:#1e293b;
+  color:#ffffff;
+}
+
+body[data-theme="dark"] .card p{
+  color:#cbd5e1;
+}
+
+body[data-theme="dark"] form{
+  background:#1e293b;
+}
+
+body[data-theme="dark"] h2,
+body[data-theme="dark"] label{
+  color:#ffffff;
+}
+
+body[data-theme="dark"] .form-control,
+body[data-theme="dark"] .form-select,
+body[data-theme="dark"] textarea{
+  background:#334155;
+  color:#ffffff;
+  border:1px solid #475569;
+}
+
+body[data-theme="dark"] .form-control::placeholder,
+body[data-theme="dark"] textarea::placeholder{
+  color:#cbd5e1;
+}
+
+body[data-theme="dark"] .btn-primary{
+  background:#3b82f6;
+  border:none;
+}
+
+body[data-theme="dark"] .btn-danger{
+  background:#dc2626;
+}
+
+body[data-theme="dark"] .btn-warning{
+  color:#000;
+}
+
+/* ========================= */
+/*         FOOTER            */
+/* ========================= */
+
+/* ==========================================
+              PREMIUM FOOTER
+========================================== */
+
+.footer{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#fff;
+    margin-top:70px;
+    padding:60px 20px 35px;
+    text-align:center;
+    border-top:3px solid #38bdf8;
+}
+
+.footer .container{
+    max-width:900px;
+    margin:auto;
+}
+
+.footer-title{
+    font-family:"Cormorant Garamond",serif;
+    font-size:2.5rem;
+    font-weight:700;
+    margin-bottom:12px;
+    color:#ffffff;
+}
+
+.footer-desc{
+    max-width:700px;
+    margin:0 auto 35px;
+    color:#cbd5e1;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* Navigation */
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin:35px 0;
+}
+
+.footer-links a{
+    text-decoration:none;
+    color:#ffffff;
+    background:rgba(255,255,255,.08);
+    padding:10px 22px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.35s;
+}
+
+.footer-links a:hover{
+    background:#38bdf8;
+    color:#0f172a;
+    transform:translateY(-4px);
+}
+
+/* Contact */
+
+.footer-contact{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:35px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+    color:#dbeafe;
+    font-size:16px;
+}
+
+/* Divider */
+
+.footer-line{
+    width:220px;
+    height:3px;
+    background:#38bdf8;
+    border:none;
+    margin:30px auto;
+    opacity:1;
+    border-radius:50px;
+}
+
+/* Bottom */
+
+.footer-bottom{
+    text-align:center;
+}
+
+.footer-bottom p{
+    margin:8px 0;
+    color:#cbd5e1;
+}
+
+/* Back To Top */
+
+.footer button{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    font-size:22px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.footer-title{
+    font-size:2rem;
+}
+
+.footer-desc{
+    font-size:15px;
+}
+
+.footer-links{
+    gap:12px;
+}
+
+.footer-links a{
+    width:150px;
+}
+
+.footer-contact{
+    flex-direction:column;
+    gap:12px;
+}
+
+}
